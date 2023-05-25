@@ -1,0 +1,52 @@
+/* 1. Change the colour
+Create a HTML file and a CSS file. Make it so the background color of Body is red when the width of the viewport is smaller than 300px, green when the viewport width is bigger than 300px and smaller than 768px, and blue when the viewport is bigger than 768px.
+
+2. Display / hide elements
+Add three div: one div with the id="small", one div with the id="medium", another div with the id="large". In each element add the word small, medium and large to its content for display purposes.
+
+Make it so only one DIV is displayed, according to the width of the current viewport.
+
+3. Adapt the size of the text according to the device
+In each DIV, add a title and a few paragraphs (lorem ipsum, and such). Give the title a descriptive text (for example: "Content for smartphones") Change the font size according to the device type.
+ */
+
+
+
+div {
+    display: none; /* Hide all divs by default */
+    font-size: 16px; /* Default font size */   
+  }
+   #small{
+    background-color: red;
+   }
+   #medium{
+    background-color: green;
+   }
+   #large{
+    background-color: rgb(76, 76, 236);
+   }
+   
+  /* Styles for small viewport */
+  @media (max-width: 300px) {
+    #small{
+      display: inline-block; /* Display only the small div */
+      font-size: 12px; 
+    }
+
+  }
+  
+  /* Styles for medium viewport */
+  @media (min-width: 301px) and (max-width: 768px) {
+    #medium {
+      display: inline-block; /* Display only the medium div */
+      font-size: 16px; 
+    }
+  }
+  
+  /* Styles for large viewport */
+  @media (min-width: 769px) {
+    #large {
+      display: inline-block; /* Display only the large div */
+      font-size: 20px; 
+    }
+  }

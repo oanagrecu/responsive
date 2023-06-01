@@ -10,7 +10,12 @@ Make it so only one DIV is displayed, according to the width of the current view
 In each DIV, add a title and a few paragraphs (lorem ipsum, and such). Give the title a descriptive text (for example: "Content for smartphones") Change the font size according to the device type.
  */
 
-
+ body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-size: 1rem; */
+}
 
 div {
     display: none; /* Hide all divs by default */
@@ -30,7 +35,7 @@ div {
   @media (max-width: 300px) {
     #small{
       display: inline-block; /* Display only the small div */
-      font-size: 12px; 
+       font-size: 1.5rem;  
     }
 
   }
@@ -39,7 +44,12 @@ div {
   @media (min-width: 301px) and (max-width: 768px) {
     #medium {
       display: inline-block; /* Display only the medium div */
-      font-size: 16px; 
+       font-size: 2rem;  
+       
+    }
+
+    h1{
+      font-size: 0.2rem;
     }
   }
   
@@ -47,6 +57,6 @@ div {
   @media (min-width: 769px) {
     #large {
       display: inline-block; /* Display only the large div */
-      font-size: 20px; 
+      font-size: 1.5rem; 
     }
   }

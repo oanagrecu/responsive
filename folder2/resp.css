@@ -2,6 +2,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
+    
   }
   #small {
     background-color: red;
@@ -24,24 +26,39 @@ body {
   }
   
   @media (min-width: 301px) and (max-width: 768px) {
+    body {
+      border: 3px solid black;
+      /* display:inline; */
+      width:100%;
+      
+    }
+
     #small .box{
         width: calc(2/3 * 100%);
+        height: 100px;
+       
     }
     #medium {
       width: calc(1/3 * 100%);
+      height:fit-content;
+     
     }
   
     #large {
+      height:fit-content;
       width: 100%;
+    
     }
   }
   
   @media (min-width: 769px) {
-    #small, #medium, #large {
-      display:inline-flex;
-      flex-direction: column;
-      justify-content: center;
-      height: 100%;
+    body {display:flex;
+      flex-direction: row;
+      width:100%;
+
+    }
+     #large {
       width: 100%;
+      display: flex;
     }
   }
